@@ -13,9 +13,15 @@ dbConnection();
 
 const allowedOrigins = [
   "http://localhost:3001",
-  "https://tu-frontend.netlify.app",
+  "https://react-mern-backend-production-c9a1.up.railway.app",
 ];
 
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 // CORS
 app.use(cors());
 
