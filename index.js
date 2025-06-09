@@ -17,12 +17,7 @@ const allowedOrigins = [
 ];
 
 // CORS
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // Directorio Público
 app.use(express.static("public"));
